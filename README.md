@@ -1,8 +1,8 @@
-# F256SuperBASIC Trigonometry (Foenix F256K2)
+# F256 SuperBASIC Trigonometry (Foenix F256K2)
 
 **trig.bas**
 
-This SuperBASIC program calculates **sine**, **cosine**, and **tangent** for any input angle in **degrees** on the Foenix F256K2.
+This F256 SuperBASIC program calculates **sine**, **cosine**, and **tangent** for any input angle in **degrees** on the Foenix F256K2.
 
 It uses:
 - **Quadrant reduction** to fold any angle into the **first quadrant** (`0°–90°`),
@@ -26,7 +26,7 @@ Tangent: Computed as sin / cos.
 
 **apop4.bas**
 
-This SuperBASIC program calculates **sine** and **cosine** values for any input angle (with up to two decimal places in degrees) using **lookup tables (LUTs)** and trigonometric relations.  
+This F256 SuperBASIC program calculates **sine** and **cosine** values for any input angle (with up to two decimal places in degrees) using **lookup tables (LUTs)** and trigonometric relations.  
 It is designed for the **Foenix F256K2** computer and demonstrates efficient trigonometric calculations without heavy computation.
 
 How it Works:
