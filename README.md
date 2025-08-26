@@ -42,7 +42,7 @@ How it Works:
 3. **Trigonometric relations**  
    - Integer part of the angle → base sine/cosine values from the main LUT.  
    - Fractional part (two decimals) → fine adjustment from the incremental LUT.  
-   - Formula used:  
+   - Formula used ([see here](https://stackoverflow.com/questions/1164492/sine-table-interpolation#1164638)):  
      ```
      sine  = sin_base * cos_frac + cos_base * sin_frac
      cosine = cos_base * cos_frac - sin_base * sin_frac
