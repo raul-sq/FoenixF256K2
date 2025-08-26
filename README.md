@@ -1,5 +1,6 @@
 # SuperBASIC Trigonometry (Foenix F256K2)
 
+
 **trig.bas**
 
 This SuperBASIC program calculates **sine**, **cosine**, and **tangent** for any input angle in **degrees** on the Foenix F256K2.
@@ -23,6 +24,7 @@ Uses sin(x) ≈ x − x³/3! + x⁵/5! − x⁷/7! with x in radians.
 Cosine calculation: Derived from the complementary angle (cos θ = sin(90°−θ)), with sign adjustments by quadrant.
 
 Tangent: Computed as sin / cos.
+
 
 **apop4.bas**
 
