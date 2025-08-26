@@ -1,4 +1,4 @@
-# SuperBASIC Trigonometry (Foenix F256K2)
+# F256SuperBASIC Trigonometry (Foenix F256K2)
 
 **trig.bas**
 
