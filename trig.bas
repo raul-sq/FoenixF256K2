@@ -1,1 +1,40 @@
-50    input "Enter an angle in degrees (float): ";d#100   trig(d#)150   end 1200  proc trig(s#)1205  a#=s#:quadrant=11210  while s#>90.01220  s#=s#-90.01225  quadrant=quadrant+11230  wend 1231  if a#>90.0:s#=90.0-s#:endif 1232  m#=90.0-s#1233  if quadrant=3:s#=m#:m#=90.0-s#:endif 1241  for n=1 to 21245  if n=2:s#=m#:endif 1250  deg_to_rad#=0.017453291260  s#=s#*deg_to_rad#1300  x=6:rem "Factorial of 3"1400  y=120:rem "Factorial of 5"1500  z=5040:rem "Factorial of 7"1600  pow2#=s#*s#:q#=pow2#*s#:rem "Power of 3"1700  r#=q#*pow2#:rem "Power of 5"1800  t#=r#*pow2#:rem "Power of 7"1900  sine#=s#-(q#/x)+(r#/y)-(t#/z)1910  if n=1:1911  if quadrant>2:sine1#=-sine#:else :sine1#=sine#1913  endif 1914  print "sin(";a#;") = ";sine1#1920  else 1921  if (quadrant=2)|(quadrant=3):1922  cosine#=-sine#1923  else :cosine#=sine#:endif 1925  print "cos(";a#;") = ";cosine#1930  endif 1940  endif 2050  next 2060  tangent#=sine1#/cosine#2070  print "tan(";a#;") = ";tangent#2100  endproc 
+```
+50    input "Enter an angle in degrees (float): ";d#
+100   trig(d#)
+150   end 
+1200  proc trig(s#)
+1205  a#=s#:quadrant=1
+1210  while s#>90.0
+1220  s#=s#-90.0
+1225  quadrant=quadrant+1
+1230  wend 
+1231  if a#>90.0:s#=90.0-s#:endif 
+1232  m#=90.0-s#
+1233  if quadrant=3:s#=m#:m#=90.0-s#:endif 
+1241  for n=1 to 2
+1245  if n=2:s#=m#:endif 
+1250  deg_to_rad#=0.01745329
+1260  s#=s#*deg_to_rad#
+1300  x=6:rem "Factorial of 3"
+1400  y=120:rem "Factorial of 5"
+1500  z=5040:rem "Factorial of 7"
+1600  pow2#=s#*s#:q#=pow2#*s#:rem "Power of 3"
+1700  r#=q#*pow2#:rem "Power of 5"
+1800  t#=r#*pow2#:rem "Power of 7"
+1900  sine#=s#-(q#/x)+(r#/y)-(t#/z)
+1910  if n=1:
+1911  if quadrant>2:sine1#=-sine#:else :sine1#=sine#
+1913  endif 
+1914  print "sin(";a#;") = ";sine1#
+1920  else 
+1921  if (quadrant=2)|(quadrant=3):
+1922  cosine#=-sine#
+1923  else :cosine#=sine#:endif 
+1925  print "cos(";a#;") = ";cosine#
+1930  endif 
+1940  endif 
+2050  next 
+2060  tangent#=sine1#/cosine#
+2070  print "tan(";a#;") = ";tangent#
+2100  endproc 
+```
