@@ -26,7 +26,7 @@ Tangent: Computed as sin / cos.
 
 **apop4.bas**
 
-This SuperBASIC program calculates **sine** and **cosine** values for any input angle (with up to two decimal places in degrees) using **lookup tables (LUTs)** and linear interpolation.  
+This SuperBASIC program calculates **sine** and **cosine** values for any input angle (with up to two decimal places in degrees) using **lookup tables (LUTs)** and trigonometric relations.  
 It is designed for the **Foenix F256K2** computer and demonstrates efficient trigonometric calculations without heavy computation.
 
 How it Works:
