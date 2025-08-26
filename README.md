@@ -39,7 +39,7 @@ How it Works:
    - Any input angle `d#` is mapped into the first quadrant `[0°, 90°]`.  
    - The quadrant number is tracked so correct signs can be applied afterwards.  
 
-3. **Interpolation**  
+3. **Trigonometric relations**  
    - Integer part of the angle → base sine/cosine values from the main LUT.  
    - Fractional part (two decimals) → fine adjustment from the incremental LUT.  
    - Formula used:  
