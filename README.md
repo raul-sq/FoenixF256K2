@@ -12,17 +12,20 @@ It uses:
 
 How it works:
 
-Input: The program asks for an angle in degrees.
+1. **Input**
+   - The program asks for an angle in degrees.
 
-Quadrant reduction: Angles are reduced by subtracting 90° repeatedly until they fall within 0–90°.
+3. **Quadrant reduction**
+   - Angles are reduced by subtracting 90° repeatedly until they fall within 0–90°.
 
-Series expansion:
+5. **Series expansion**
+   - Uses sin(x) ≈ x − x³/3! + x⁵/5! − x⁷/7! with x in radians.
 
-Uses sin(x) ≈ x − x³/3! + x⁵/5! − x⁷/7! with x in radians.
+4. **Cosine calculation**
+   - Derived from the complementary angle (cos θ = sin(90°−θ)), with sign adjustments by quadrant.
 
-Cosine calculation: Derived from the complementary angle (cos θ = sin(90°−θ)), with sign adjustments by quadrant.
-
-Tangent: Computed as sin / cos.
+6. **Tangent**
+   - Computed as sin / cos.
 
 **apop4.bas**
 
