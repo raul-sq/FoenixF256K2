@@ -10,7 +10,7 @@ It uses:
 - Complementary-angle identities to derive `cos(x)`,
 - A simple ratio to compute `tan(x)`.
 
-How it Works:
+How it works:
 
 Input: The program asks for an angle in degrees.
 
@@ -29,7 +29,7 @@ Tangent: Computed as sin / cos.
 This F256 SuperBASIC program calculates **sine** and **cosine** values for any input angle (with up to two decimal places in degrees) using **lookup tables (LUTs)** and trigonometric relations.  
 It is designed for the **Foenix F256K2** computer and demonstrates efficient trigonometric calculations without heavy computation.
 
-How it Works:
+How it works:
 
 1. **Precomputed tables**  
    - `trig#(2,91)` contains sine and cosine values from 0° to 90° in steps of 1°.  
@@ -49,5 +49,35 @@ How it Works:
      ```
 
 4. **Quadrant sign correction**  
-   - Adjusts `sin` and `cos` signs according to the quadrant (I–IV).  
+   - Adjusts `sin` and `cos` signs according to the quadrant (I–IV).
 
+**cordic.bas**
+
+This F256 SuperBASIC program calculates **sine**, **cosine**, and **tangent** for any input angle in **degrees (with five decimals)** on the **Foenix F256K2**.
+
+It uses the **CORDIC algorithm** (Coordinate Rotation Digital Computer), implemented with **lookup tables (LUTs)** for efficiency.
+
+How it works:
+
+1. **Precomputed tables**  
+   - `tan#(25)` contains tangent values of the CORDIC rotation angles.  
+   - `arctan#(25)` contains the corresponding arctangent angles in **degrees**.  
+   - `cos#(25)` contains scaling (cosine) factors used to normalize the final result.  
+
+2. **Quadrant reduction**  
+   - Any input angle `d#` is reduced into the first quadrant (`0°–90°`).  
+   - A quadrant flag (1–4) is stored so the correct **signs** can be applied to sine/cosine afterwards.  
+
+3. **CORDIC iteration**  
+   - Starts with an initial vector `(x, y) = (1, 0)`.  
+   - Repeatedly rotates this vector by predefined angles using only additions and multiplications by precomputed tangents.  
+   - Accumulates the scaling factor `k#` from the cosine LUT.  
+   - Converges toward the requested angle with 25 iterations.  
+
+4. **Final normalization**  
+   - After iterations, `x` and `y` are scaled by `k#`.  
+   - Results:  
+     - `sine#  = y`  
+     - `cosine# = x`  
+     - `tan# = sine# / cosine#`  
+   - Signs are adjusted based on the original quadrant.
