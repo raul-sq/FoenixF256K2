@@ -54,7 +54,7 @@ How it works:
 4. **Quadrant sign correction**  
    - Adjusts `sin` and `cos` signs according to the quadrant (I–IV).
 
-**cordic.bas**
+**cordic8.bas**
 
 This F256 SuperBASIC program calculates **sine**, **cosine**, and **tangent** for any input angle in **degrees (with five decimals)** on the **Foenix F256K2**.
 
