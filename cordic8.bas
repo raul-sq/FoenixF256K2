@@ -41,8 +41,8 @@
 490   if quadrant=2:cosine#=-cosine#:endif 
 500   if quadrant=3:sine#=-cosine#:cosine#=-sine3q#:endif 
 510   if quadrant=4:sine#=-sine#:endif 
-515   tan#=sine#/cosine#
-520   print sine#,cosine#,tan#
+515   tangent#=sine#/cosine#
+520   print sine#,cosine#,tangent#
 530   endproc 
 1000  rem "tan(theta)"
 1010  data 1.00000,0.50000,0.25000,0.12500,0.06250
